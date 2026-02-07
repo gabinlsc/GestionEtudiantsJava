@@ -21,7 +21,9 @@ public class PremierPas {
 		System.out.println(eleve1.sePresenter());
 		
 		// Demande des notes de l'étudiant
-		eleve1.setNotes(saisirNotes(lecteur, 5));
+		System.out.println("Entrez le nombre de notes à calculer : ");
+		int nbNotes = lecteur.nextInt();
+		eleve1.setNotes(saisirNotes(lecteur, nbNotes));
 		
 		// Initialisation des variables
 		double moyenne;
