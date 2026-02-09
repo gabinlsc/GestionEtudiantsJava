@@ -1,6 +1,6 @@
 # Gestion de notes 🎓
 
-Une application console en **Java** permettant de gérer les informations d'un étudiant, de saisir ses notes et de générer la note maximale, la moyenne et la mention obtenue.
+Une application console en **Java** permettant de gérer les informations d'un étudiant, de saisir ses notes et de générer la note maximale, la moyenne et la mention obtenue. Les données sont enregistrées dans un fichier .csv en local.
 
 Ce projet a été réalisé pour mettre en pratique les concepts fondamentaux de la **Programmation Orientée Objet (POO)**.
 
@@ -14,6 +14,8 @@ Le programme permet de manière interactive de :
   - La **meilleure note** (Max).
   - La **mention** correspondante (Très bien, Bien, Assez bien...).
 - Afficher ces dernières variables.
+- Sauvegarde automatique de la liste des étudiants dans un fichier etudiants.csv en fin de session.
+- Calcul de la moyenne générale de la promo et désignation du major de promo.
 
 ## 🛠️ Concepts techniques abordés
 
@@ -24,25 +26,29 @@ Ce projet met en œuvre les piliers de la POO en Java :
 - **Constructeurs** : Initialisation cohérente des objets dès leur création.
 - **Logique algorithmique** : Boucles `for`, conditions `if/else`, calcul de cumul et recherche de maximum.
 - **Interaction utilisateur** : Utilisation de la classe `java.util.Scanner` pour les entrées clavier.
+- **Persistance locale** : Sauvegarde automatique de la liste des étudiants dans un fichier etudiants.csv en fin de session.
+- **Analyse de classe** : Calcul de la moyenne générale de la promo et désignation automatique du major de promo.
+- **Gestion des flux (I/O)** : Utilisation de FileWriter et PrintWriter pour l'écriture de fichiers.
+- **Gestion des exceptions** : Utilisation de blocs `try-catch` et du *try-with-resources* pour sécuriser les opérations critiques.
 
 ## 💻 Exemple d'utilisation
 
 Voici à quoi ressemble une exécution du programme dans la console :
 
 ```text
-Entrer le prénom de l'étudiant :
-Thomas
-Entrer l'âge de l'étudiant :
-20
-L'étudiant se nomme Thomas, il a 20 ans
+Entrez le prénom de l'étudiant : g
+Entrer l'âge de l'étudiant : 1
+Entrer le nombre de notes à calculer : 1
+Entrez la note obtenue n°1 : 1
+Voulez-vous ajouter un autre étudiant ? (o/n) : n
+Sauvegarde réussie dans etudiants.csv
+Major de la promo : Etudiant : g | 1 ans
+Notes obtenues par l'élève g : 1.0 | 
+Pas de mention
+Moyenne : 1.0
+Meilleure note : 1.0
 
-Entrez la note obtenue n°1 :
-15,5
-Entrez la note obtenue n°2 :
-18
-...
+-------------------------------------------
 
-Notes obtenues : 10.0 | 10.0 | 15.0 | 20.0 | 20.0 |
-Mention bien
-Moyenne : 15.8
-Meilleure note : 18.0
+-------------------------------------------
+Moyenne générale de la classe : 1.0
