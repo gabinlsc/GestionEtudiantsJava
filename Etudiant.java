@@ -7,7 +7,7 @@ public class Etudiant {
 		age = a;
 	}
 	public String sePresenter(){
-		return ("L'étudiant se nomme " + prenom + ", il a " + age +" ans");
+		return ("Etudiant : " + prenom + " | " + age +" ans");
 	}
 	public String getPrenom(){
 		return prenom;
@@ -39,4 +39,12 @@ public class Etudiant {
 		}
 		return notemax;
 	}
+	public String toCSV() {
+		String resultat = this.prenom + ";" + this.age;
+		for (double n : this.notes) {
+			resultat += ";" + n;
+		}
+		return resultat;
+	}
+	
 }
